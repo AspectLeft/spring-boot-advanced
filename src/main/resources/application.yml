@@ -1,0 +1,20 @@
+spring:
+  thymeleaf:
+    mode: HTML
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_boot?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: abcd123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: info
+    io.aspectleft: debug
+  file:
+    name: log/my.log

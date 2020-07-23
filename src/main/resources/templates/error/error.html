@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>error</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container w-75 align-self-center">
+
+    <div class="jumbotron">
+        <h2>
+            error
+        </h2>
+        <p>
+            服务器异常，请联系管理员
+        </p>
+        <p>
+            请求路径： <code th:text="${url}"></code>
+        </p>
+        <p>
+            详情： <code th:text="${exception.message}"></code>
+        </p>
+    </div>
+    <div hidden="hidden">
+
+        <div th:text="'Failed request URL: ' + ${url}"></div>
+        <div th:text="'Exception message: ' + ${exception.message}"></div>
+        <ul>
+            <li th:each="st: ${exception.stackTrace}">
+            <span th:text="${st}">
+
+            </span>
+
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container align-self-center w-75">
+    <div class="card p-4 m-4">
+        <div class="jumbotron-fluid">
+            <h1>欢迎</h1>
+            <p th:text="${session.user.username}"></p>
+            <p><a href="#" th:href="@{/books/1}">查看书单详情</a> </p>
+        </div>
+
+    </div>
+    <a href="#" class="btn btn-warning" th:href="@{/logout}">注 销</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
+</body>
+</html>
